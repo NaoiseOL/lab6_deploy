@@ -1,0 +1,17 @@
+services:
+  service_a:
+    image: ghcr.io/naoiseol/lab6_service_a/service_a:latest
+    ports:
+      - "8001:8000"
+    networks:
+      - labnet
+
+  service_b:
+    image: ghcr.io/naoiseol/lab6_service_b/service_b:latest
+    ports:
+      - "8002:8000"
+    networks:
+      - labnet
+
+  networks:
+    labnet:
