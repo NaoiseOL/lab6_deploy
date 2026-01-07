@@ -5,6 +5,8 @@ services:
       - "8001:8000"
     networks:
       - labnet
+    env_file:
+      - .env
 
   service_b:
     image: ghcr.io/naoiseol/lab6_service_b/service_b:latest
@@ -12,6 +14,8 @@ services:
       - "8002:8000"
     networks:
       - labnet
+    env_file:
+      - .env
 
 networks:
   labnet:
